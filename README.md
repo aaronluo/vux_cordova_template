@@ -1,0 +1,1 @@
+# vux_cordova_template
