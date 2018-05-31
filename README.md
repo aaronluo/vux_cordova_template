@@ -37,5 +37,5 @@ module.exports = vuxLoader.merge(webpackConfig, {
 1. Usually, development work can be done by `npm run dev`
 2. if need cordova to package the applicaton, follow the cordova commands, such as `cordova platform add android`, but be sure run `npm run build` before running any cordova commands. Also please note to check if `www/, platforms/, plugins/` folder existing, otherwise please create them mannually
 ---
-known issues
+### known issues
 * webpack loaded fonts can't be access after `npm run build`
