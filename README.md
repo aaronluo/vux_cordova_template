@@ -39,3 +39,15 @@ module.exports = vuxLoader.merge(webpackConfig, {
 ---
 ### known issues
 * webpack loaded fonts can't be access after `npm run build`
+\[fixed\] add a sepecific publicPath for fonts, edit `build/webpack.base.conf.js`, add the below line,
+```javascript
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: utils.assetsPath('fonts/[name].[hash:7].[ext]'),
+          publicPath: process.env.NODE_ENV === 'production' ? '../../' : './'
+        }
+      }
+```
